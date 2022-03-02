@@ -9,18 +9,23 @@ import { HomeComponent } from './componentes/home/home.component';
 import { Home2Component } from './componentes/home2/home2.component';
 import { ErrorPageComponent } from './componentes/error-page/error-page.component';
 import { AuthwardService } from './services/authward.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonDetailsComponent } from './componentes/pokemon-details/pokemon-details.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     CarroComponent,
     HomeComponent,
     Home2Component,
-    ErrorPageComponent
+    ErrorPageComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     AuthwardService
