@@ -1,0 +1,13 @@
+<form [formGroup]="form" *ngIf="loaded" (ngSubmit)="submit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input formControlName="name" matInput>
+    <mat-error *ngIf="form.controls.name.invalid">Falta el nombre</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input formControlName="lastname" matInput>
+  </mat-form-field>
+  <button mat-raised-button [disabled]="form.invalid" type="submit" color="primary">Submit</button>
+
+</form>
